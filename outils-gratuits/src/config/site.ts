@@ -19,6 +19,7 @@ export const siteConfig = {
   author: "Astucio",
   email: "contact@astucio.fr",
   createdYear: 2026,
+  adsenseClientId: "ca-pub-7305983328286269",
 };
 
 export type SiteConfig = typeof siteConfig;
