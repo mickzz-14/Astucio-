@@ -53,4 +53,12 @@ export const toolComponentRegistry: Record<string, ComponentType> = {
   ConsommationElectrique: dynamic(() => import("@/components/tools/ConsommationElectrique")),
   ConsommationCarburant: dynamic(() => import("@/components/tools/ConsommationCarburant")),
   JoursEntreDeuxDates: dynamic(() => import("@/components/tools/JoursEntreDeuxDates")),
-};
+ ImpotRevenu: dynamic(() => import("@/components/tools/ImpotRevenu")),
+  PrelevementSource: dynamic(() => import("@/components/tools/PrelevementSource")),
+  CreditImpotEmploiDomicile: dynamic(
+    () => import("@/components/tools/CreditImpotEmploiDomicile")
+  ),
+  FuseauxHoraires: dynamic(() => import("@/components/tools/FuseauxHoraires")),
+  BudgetVoyage: dynamic(() => import("@/components/tools/BudgetVoyage")),
+  DistanceVilles: dynamic(() => import("@/components/tools/DistanceVilles")),
+  };
