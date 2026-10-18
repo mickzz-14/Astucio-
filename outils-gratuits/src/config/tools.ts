@@ -898,7 +898,226 @@ export const tools: Tool[] = [
     addedAt: "2026-01-28",
     keywords: ["jours entre deux dates", "calcul de dates", "délai en jours"],
   },
-];
+// ------------------------------------------------------------- IMPÔTS
+  {
+    slug: "impot-revenu",
+    category: "impots",
+    name: "Calculateur d'impôt sur le revenu",
+    shortDescription: "Estimez votre impôt avec le barème 2026 et le quotient familial",
+    metaDescription:
+      "Estimez votre impôt sur le revenu 2026 (revenus 2025) avec le barème progressif, le quotient familial et la décote. Gratuit, sans inscription.",
+    intro: [
+      "Cet outil estime l'impôt sur le revenu d'un foyer fiscal à partir du revenu net imposable, de la situation familiale et du nombre d'enfants à charge. Il applique le barème progressif 2026, qui concerne les revenus perçus en 2025 et compte cinq tranches de 0 % à 45 %.",
+      "Le calcul tient compte du quotient familial (avec son plafonnement par demi-part supplémentaire) et de la décote réservée aux petits impôts. Le résultat est une estimation : il n'inclut ni les réductions et crédits d'impôt, ni la contribution sur les hauts revenus, ni les situations particulières comme celle du parent isolé.",
+    ],
+    howItWorks: [
+      "Saisissez le revenu net imposable annuel de votre foyer.",
+      "Indiquez si vous êtes seul(e) ou en couple.",
+      "Renseignez le nombre d'enfants à charge.",
+      "Consultez l'impôt estimé, le taux moyen et la tranche marginale d'imposition.",
+    ],
+    faq: [
+      {
+        question: "Quel barème est utilisé pour ce calcul ?",
+        answer:
+          "Le barème de l'impôt sur le revenu 2026, applicable aux revenus perçus en 2025. Il comporte cinq tranches : 0 % jusqu'à 11 600 €, 11 % jusqu'à 29 579 €, 30 % jusqu'à 84 577 €, 41 % jusqu'à 181 917 € et 45 % au-delà, par part de quotient familial.",
+      },
+      {
+        question: "Ce résultat est-il identique à mon avis d'imposition ?",
+        answer:
+          "Non, c'est une estimation. Votre avis d'imposition tient compte de l'ensemble de vos revenus, de vos charges déductibles, de vos réductions et crédits d'impôt et de votre situation exacte. Pour un montant officiel, utilisez le simulateur de l'administration fiscale sur impots.gouv.fr.",
+      },
+      {
+        question: "Qu'est-ce que le quotient familial ?",
+        answer:
+          "Le quotient familial divise le revenu imposable du foyer par un nombre de parts qui dépend de la situation familiale. Un célibataire a 1 part, un couple 2 parts, et chacun des deux premiers enfants ajoute une demi-part. L'avantage obtenu grâce aux demi-parts supplémentaires est plafonné.",
+      },
+      {
+        question: "Qu'est-ce que la décote ?",
+        answer:
+          "La décote est une réduction automatique accordée aux foyers dont l'impôt brut est faible. Elle diminue l'impôt, voire l'annule, lorsque celui-ci reste en dessous d'un seuil fixé chaque année par la loi de finances.",
+      },
+    ],
+    component: "ImpotRevenu",
+    popular: true,
+    addedAt: "2026-10-18",
+    keywords: ["impôt sur le revenu", "barème impôt 2026", "quotient familial", "simulation impôt", "tranche d'imposition"],
+  },
+  {
+    slug: "prelevement-a-la-source",
+    category: "impots",
+    name: "Calculateur de prélèvement à la source",
+    shortDescription: "Calculez le montant prélevé chaque mois sur votre salaire",
+    metaDescription:
+      "Calculez le montant de votre prélèvement à la source mensuel à partir de votre salaire net imposable et de votre taux, et découvrez votre net après impôt.",
+    intro: [
+      "Le prélèvement à la source est l'impôt sur le revenu retenu directement sur votre salaire chaque mois. Il se calcule en appliquant un taux à votre salaire net imposable.",
+      "Cet outil vous indique combien est prélevé chaque mois, le salaire qu'il vous reste après impôt et le total prélevé sur douze mois, à partir du taux que vous avez saisi.",
+    ],
+    howItWorks: [
+      "Saisissez votre salaire net imposable mensuel, indiqué sur votre bulletin de paie.",
+      "Renseignez votre taux de prélèvement à la source.",
+      "Consultez le montant prélevé et votre net après impôt.",
+    ],
+    faq: [
+      {
+        question: "Où trouver mon taux de prélèvement à la source ?",
+        answer:
+          "Votre taux figure sur votre bulletin de paie et sur votre avis d'imposition. Vous pouvez aussi le consulter et le modifier depuis votre espace particulier sur impots.gouv.fr.",
+      },
+      {
+        question: "Quelle différence entre taux personnalisé et taux neutre ?",
+        answer:
+          "Le taux personnalisé est calculé par l'administration à partir de votre dernière déclaration. Le taux neutre (ou non personnalisé) est un taux par défaut qui dépend uniquement du niveau de salaire, sans tenir compte de votre situation familiale ni de vos autres revenus.",
+      },
+      {
+        question: "Sur quel salaire s'applique le taux ?",
+        answer:
+          "Le taux s'applique au salaire net imposable, qui est différent du net à payer avant impôt affiché sur la fiche de paie. Reprenez la ligne « net imposable » de votre bulletin pour un résultat fiable.",
+      },
+    ],
+    component: "PrelevementSource",
+    addedAt: "2026-10-18",
+    keywords: ["prélèvement à la source", "taux PAS", "impôt sur salaire", "net après impôt"],
+  },
+  {
+    slug: "credit-impot-emploi-domicile",
+    category: "impots",
+    name: "Calculateur de crédit d'impôt emploi à domicile",
+    shortDescription: "Estimez votre crédit d'impôt pour ménage, garde d'enfants ou aide à domicile",
+    metaDescription:
+      "Estimez votre crédit d'impôt de 50 % pour l'emploi d'un salarié à domicile : ménage, garde d'enfants, soutien scolaire. Plafonds de dépenses inclus.",
+    intro: [
+      "L'emploi d'un salarié à domicile ou le recours à un organisme de services à la personne ouvre droit à un crédit d'impôt égal à 50 % des dépenses engagées, dans la limite d'un plafond annuel. Il concerne notamment le ménage, la garde d'enfants, le soutien scolaire ou l'aide aux personnes âgées.",
+      "Cet outil calcule ce crédit à partir de vos dépenses annuelles, en appliquant le plafond adapté à votre situation : plafond de base, majoration par enfant ou ascendant à charge, première année d'emploi direct ou invalidité.",
+    ],
+    howItWorks: [
+      "Saisissez le total de vos dépenses annuelles pour l'emploi à domicile.",
+      "Indiquez le nombre d'enfants ou d'ascendants à charge.",
+      "Sélectionnez votre situation particulière si elle s'applique.",
+      "Consultez le crédit d'impôt estimé et le plafond retenu.",
+    ],
+    faq: [
+      {
+        question: "Quel est le taux du crédit d'impôt ?",
+        answer:
+          "Le crédit d'impôt est de 50 % des dépenses retenues. Même si vous ne payez pas d'impôt, il vous est remboursé pour la part qui dépasse votre impôt.",
+      },
+      {
+        question: "Quels sont les plafonds de dépenses ?",
+        answer:
+          "Le plafond de base est de 12 000 € par an, majoré de 1 500 € par enfant ou ascendant à charge, dans la limite de 15 000 €. Il passe à 15 000 € (18 000 € maximum avec les majorations) la première année d'emploi direct, et à 20 000 € pour une personne invalide ou en situation de handicap.",
+      },
+      {
+        question: "Quelles dépenses sont prises en compte ?",
+        answer:
+          "Les salaires et cotisations versés à un salarié à domicile, ou les sommes payées à une association ou entreprise de services à la personne agréée, après déduction des aides perçues. Certaines activités ont leurs propres sous-plafonds, par exemple le bricolage ou le jardinage.",
+      },
+    ],
+    component: "CreditImpotEmploiDomicile",
+    addedAt: "2026-10-18",
+    keywords: ["crédit d'impôt emploi à domicile", "services à la personne", "garde d'enfants impôt", "aide ménagère crédit d'impôt"],
+  },
+
+  // ------------------------------------------------------------- VOYAGES
+  {
+    slug: "fuseaux-horaires",
+    category: "voyages",
+    name: "Convertisseur de fuseaux horaires",
+    shortDescription: "Comparez l'heure entre 25 villes du monde",
+    metaDescription:
+      "Convertissez une date et une heure entre Paris, New York, Tokyo, Dubaï et 21 autres villes, avec le décalage horaire et le changement d'heure pris en compte.",
+    intro: [
+      "Ce convertisseur affiche l'heure exacte dans 25 villes du monde à partir d'une date et d'une heure locales. Il indique aussi le décalage horaire par rapport à votre ville de départ, utile pour fixer un appel, une visioconférence ou suivre un vol.",
+      "Les changements d'heure été/hiver sont pris en compte automatiquement grâce à la base de fuseaux horaires de votre navigateur : le décalage affiché correspond à la date que vous choisissez.",
+    ],
+    howItWorks: [
+      "Choisissez la ville de départ.",
+      "Indiquez la date et l'heure sur place.",
+      "Lisez l'heure équivalente dans chaque ville, avec l'écart en heures.",
+    ],
+    faq: [
+      {
+        question: "Le changement d'heure été/hiver est-il pris en compte ?",
+        answer:
+          "Oui. Le décalage est calculé pour la date que vous saisissez, ce qui explique qu'il puisse varier d'une heure selon la période de l'année entre deux villes qui ne changent pas d'heure aux mêmes dates.",
+      },
+      {
+        question: "Pourquoi certains décalages sont-ils en demi-heures ?",
+        answer:
+          "Quelques pays, comme l'Inde, utilisent un fuseau décalé de 30 minutes par rapport aux fuseaux entiers. L'outil affiche alors un écart comme +4,5 h.",
+      },
+    ],
+    component: "FuseauxHoraires",
+    popular: true,
+    addedAt: "2026-10-18",
+    keywords: ["décalage horaire", "fuseaux horaires", "heure à New York", "convertisseur heure", "heure à Tokyo"],
+  },
+  {
+    slug: "budget-voyage",
+    category: "voyages",
+    name: "Calculateur de budget voyage",
+    shortDescription: "Estimez le coût total d'un séjour, par personne et par jour",
+    metaDescription:
+      "Calculez le budget de votre voyage : transport, hébergement, repas et activités, avec une marge pour imprévus. Total, coût par personne et par jour.",
+    intro: [
+      "Ce calculateur additionne les principaux postes de dépense d'un voyage : transport, hébergement, repas, activités, plus une marge pour les imprévus. Il donne le budget total, le coût par personne et le coût par jour.",
+      "Il permet de comparer rapidement plusieurs destinations ou durées : modifiez un seul chiffre et voyez l'impact sur l'ensemble du séjour.",
+    ],
+    howItWorks: [
+      "Indiquez le nombre de voyageurs, de jours et de nuits.",
+      "Renseignez le transport, l'hébergement par nuit et les repas par jour et par personne.",
+      "Ajoutez le budget activités et une marge pour imprévus.",
+      "Consultez le budget total, par personne et par jour.",
+    ],
+    faq: [
+      {
+        question: "Quelle marge prévoir pour les imprévus ?",
+        answer:
+          "Beaucoup de voyageurs prévoient entre 10 % et 15 % du budget pour les dépenses imprévues : transports locaux, achats, changement de plan. Ajustez cette marge selon votre destination et votre façon de voyager.",
+      },
+      {
+        question: "L'hébergement est-il compté par personne ou pour tout le groupe ?",
+        answer:
+          "Pour tout le groupe : saisissez le prix total d'une nuit (chambre ou logement entier), pas le prix par personne. Les repas, eux, se saisissent par personne et par jour.",
+      },
+    ],
+    component: "BudgetVoyage",
+    addedAt: "2026-10-18",
+    keywords: ["budget voyage", "coût d'un voyage", "calcul budget vacances", "budget séjour"],
+  },
+  {
+    slug: "distance-entre-villes",
+    category: "voyages",
+    name: "Calculateur de distance entre deux villes",
+    shortDescription: "Distance à vol d'oiseau et durée de vol entre deux villes",
+    metaDescription:
+      "Calculez la distance à vol d'oiseau en kilomètres et en miles entre deux villes du monde, avec une estimation de la durée de vol. Gratuit et instantané.",
+    intro: [
+      "Cet outil calcule la distance à vol d'oiseau entre deux villes parmi 39 destinations, en France et dans le monde, en kilomètres et en miles. Il estime aussi la durée d'un vol direct.",
+      "La distance est calculée à partir des coordonnées géographiques des villes, avec la formule de la haversine qui tient compte de la courbure de la Terre.",
+    ],
+    howItWorks: [
+      "Choisissez la ville de départ.",
+      "Choisissez la ville d'arrivée.",
+      "Lisez la distance en kilomètres et en miles ainsi que la durée de vol estimée.",
+    ],
+    faq: [
+      {
+        question: "Quelle différence avec la distance par la route ?",
+        answer:
+          "La distance à vol d'oiseau est la ligne droite entre deux points. La distance par la route est en général plus longue, de plusieurs dizaines de pour cent selon le relief et le réseau routier.",
+      },
+      {
+        question: "Comment est estimée la durée de vol ?",
+        answer:
+          "La durée est calculée avec une vitesse moyenne de 800 km/h. Elle ne comprend ni l'embarquement, ni les escales, ni les écarts de trajectoire, donc un vol réel est souvent un peu plus long.",
+      },
+    ],
+    component: "DistanceVilles",
+    addedAt: "2026-10-18",
+    keywords: ["distance entre deux villes", "distance à vol d'oiseau", "kilomètres entre villes", "durée de vol"],
+  },];
 
 export function getToolsByCategory(category: CategorySlug): Tool[] {
   return tools.filter((t) => t.category === category);
