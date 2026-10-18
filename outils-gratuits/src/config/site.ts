@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Des outils gratuits, sans compte, sans détour.",
   description:
     "Astucio réunit des centaines d'outils gratuits en ligne : finance, immobilier, santé, mathématiques, conversions, PDF, images et plus. Rapides, sans inscription, utilisables directement dans votre navigateur.",
-  url: "https://www.astucio.fr",
+  url: "https://astucio-ferw.vercel.app",
   locale: "fr_FR",
   twitter: "@astucio_fr",
   keywords: [
