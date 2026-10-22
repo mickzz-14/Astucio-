@@ -12,7 +12,7 @@ import { getPopularTools, getLatestTools, tools } from "@/config/tools";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — Plus de 300 outils gratuits en ligne`,
+  title: `${siteConfig.name} — Des outils gratuits en ligne`,
   description: siteConfig.description,
   alternates: { canonical: "/" },
 };
@@ -31,7 +31,7 @@ const homeFaq = [
   {
     question: "De nouveaux outils sont-ils ajoutés régulièrement ?",
     answer:
-      "Oui, l'objectif d'Astucio est d'atteindre plus de 300 outils. De nouvelles catégories et de nouveaux outils sont publiés chaque semaine.",
+      "Oui, l'objectif d'Astucio est d'atteindre plus de 300 outils. De nouvelles catégories et de nouveaux outils sont publiés régulièrement.",
   },
 ];
 
