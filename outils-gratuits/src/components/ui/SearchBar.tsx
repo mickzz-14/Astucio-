@@ -57,7 +57,7 @@ export function SearchBar({ size = "md", placeholder, autoFocus }: SearchBarProp
             setOpen(true);
           }}
           onFocus={() => setOpen(true)}
-          placeholder={placeholder ?? "Rechercher parmi 300+ outils (ex : TVA, PDF, IMC…)"}
+          placeholder={placeholder ?? "Rechercher parmi nos outils (ex : TVA, PDF, IMC…)"}
           className={cn(
             "w-full bg-transparent text-ink outline-none placeholder:text-muted dark:text-ink-dark dark:placeholder:text-muted-dark",
             size === "lg" ? "text-base" : "text-sm"
