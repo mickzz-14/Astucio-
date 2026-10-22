@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import type { ComponentType } from "react";
-
+import { toolRegistryExtra } from "./toolRegistryExtra";
 /**
  * Every interactive tool is registered here by the `component` key used in
  * src/config/tools.ts. Components are dynamically imported (code-split) so a
@@ -61,4 +61,4 @@ export const toolComponentRegistry: Record<string, ComponentType> = {
   FuseauxHoraires: dynamic(() => import("@/components/tools/FuseauxHoraires")),
   BudgetVoyage: dynamic(() => import("@/components/tools/BudgetVoyage")),
   DistanceVilles: dynamic(() => import("@/components/tools/DistanceVilles")),
-  };
+  ...toolRegistryExtra,};    
