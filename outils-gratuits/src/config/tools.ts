@@ -1,5 +1,5 @@
 import type { CategorySlug } from "./categories";
-
+import { toolsExtra } from "./toolsExtra";
 export interface FAQItem {
   question: string;
   answer: string;
@@ -1117,7 +1117,7 @@ export const tools: Tool[] = [
     component: "DistanceVilles",
     addedAt: "2026-10-18",
     keywords: ["distance entre deux villes", "distance à vol d'oiseau", "kilomètres entre villes", "durée de vol"],
-  },];
+  },...toolsExtra,];
 
 export function getToolsByCategory(category: CategorySlug): Tool[] {
   return tools.filter((t) => t.category === category);
