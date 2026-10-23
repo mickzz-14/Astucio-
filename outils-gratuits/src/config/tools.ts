@@ -1,5 +1,6 @@
 import type { CategorySlug } from "./categories";
 import { toolsExtra } from "./toolsExtra";
+import { faqExtra } from "./faqExtra";
 export interface FAQItem {
   question: string;
   answer: string;
@@ -31,7 +32,7 @@ export interface Tool {
   keywords: string[];
 }
 
-export const tools: Tool[] = [
+const baseTools: Tool[] = [ 
   // ---------------------------------------------------------------- FINANCE
   {
     slug: "calculateur-credit",
@@ -1117,7 +1118,11 @@ export const tools: Tool[] = [
     component: "DistanceVilles",
     addedAt: "2026-10-18",
     keywords: ["distance entre deux villes", "distance à vol d'oiseau", "kilomètres entre villes", "durée de vol"],
-  },...toolsExtra,];
+    
+
+},...toolsExtra,];
+
+export const tools: Tool[] = baseTools.map((t) => ({ ...t, faq: [...t.faq, ...(faqExtra[t.slug] ?? [])] }));
 
 export function getToolsByCategory(category: CategorySlug): Tool[] {
   return tools.filter((t) => t.category === category);
