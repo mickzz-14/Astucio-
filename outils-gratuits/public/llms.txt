@@ -1,0 +1,40 @@
+# Astucio
+
+> Astucio est une plateforme française d'outils gratuits en ligne, utilisables sans inscription. Elle propose des calculateurs et utilitaires pour les besoins du quotidien.
+
+- Site officiel : https://www.astucio.eu/
+- Sitemap XML : https://www.astucio.eu/sitemap.xml
+- À propos : https://www.astucio.eu/a-propos
+- Contact : https://www.astucio.eu/contact
+- Politique de confidentialité : https://www.astucio.eu/confidentialite
+- Conditions d'utilisation : https://www.astucio.eu/conditions-utilisation
+
+## Catégories d'outils
+
+- Finance : https://www.astucio.eu/finance
+- Impôts : https://www.astucio.eu/impots
+- Immobilier : https://www.astucio.eu/immobilier
+- Travail : https://www.astucio.eu/travail
+- Santé : https://www.astucio.eu/sante
+- Éducation : https://www.astucio.eu/education
+- Mathématiques : https://www.astucio.eu/mathematiques
+- Conversions : https://www.astucio.eu/conversions
+- Voyages : https://www.astucio.eu/voyages
+- Automobile : https://www.astucio.eu/automobile
+- Énergie : https://www.astucio.eu/energie
+- Informatique : https://www.astucio.eu/informatique
+- PDF et documents : https://www.astucio.eu/pdf
+- Images et médias : https://www.astucio.eu/images-medias
+- Vie quotidienne : https://www.astucio.eu/vie-quotidienne
+
+## Exemples d'outils
+
+- Calculateur de crédit : https://www.astucio.eu/finance/calculateur-credit
+- Calculateur d'intérêts composés : https://www.astucio.eu/finance/interets-composes
+- Calculateur de TVA : https://www.astucio.eu/finance/calculateur-tva
+
+## Utilisation et limites
+
+Astucio fournit des outils pratiques et des estimations indicatives. Pour les sujets financiers, fiscaux ou de santé, les résultats ne remplacent pas les conseils d'un professionnel qualifié. Les outils traitent les données selon les indications affichées sur chaque page.
+
+Pour découvrir les autres outils et leurs URL, consultez le sitemap XML.
