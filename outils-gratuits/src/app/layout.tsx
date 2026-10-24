@@ -75,11 +75,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${siteConfig.url}/recherche?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (
